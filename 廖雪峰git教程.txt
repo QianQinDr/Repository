@@ -1,0 +1,38 @@
+安装完成。
+启动Git Bash
+设置ID和邮箱
+	git config --global user.name "your name"
+	git config --global user.email "email@example.com"
+创建版本库Repository
+	cd D:					进入D盘
+	mkdir repository		建立文件夹
+	cd repository			进入文件夹
+	pwd						显示当前位置目录
+	git init				将此目录变为Git可以管理的仓库
+							出现版本库隐藏目录.git
+新建文件放到Repository目录或其子目录下（工作区）
+将文件添加到暂存区
+	git add file-name
+将暂存区文件提交到版本库（即.git目录）
+	git commit -m "任意说明文字"
+查看仓库当前状态
+	git status				版本库与工作区文件是否同步
+	git diff file-name		查看不同之处
+查看文件修改记录
+	git log						详细记录
+	git log --pretty=oneline	简略记录（仅版本号和修改内容）
+回退到上一版本
+	git reset --hard HEAD^		上上版本HEAD^^；上100版本HEAD~100
+	git reset --hard 版本号		回退到对应版本号（前七位即可）
+	cat filename				查看版本库当前文件内容
+查看工作区和版本库文件区别
+	git diff HEAD -- file-name
+撤销修改
+	版本回退					撤销版本库的修改（仅限未提交到远程仓库）
+	git reset HEAD file-name	撤销暂存区的修改
+	git checkout -- file-name	撤销工作区的修改
+删除文件
+	rm file-name				删除工作区文件
+	git rm file-name			删除版本库文件
+	git commit -m "任意文字说明"添加说明
+	
