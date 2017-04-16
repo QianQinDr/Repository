@@ -24,7 +24,7 @@
 回退到上一版本
 	git reset --hard HEAD^          上上版本HEAD^^；上100版本HEAD~100
 	git reset --hard 版本号         回退到对应版本号（前七位即可）
-	cat filename                    查看版本库当前文件内容
+	cat file-name                    查看仓库当前文件内容
 查看工作区和版本库文件区别
 	git diff HEAD -- file-name
 撤销修改
@@ -35,4 +35,5 @@
 	rm file-name                    删除工作区文件
 	git rm file-name                删除版本库文件
 	git commit -m "任意文字说明"    添加说明
-	
+
+注：Git保存的是文件的修改，广义上称之为暂存区/版本库文件。
