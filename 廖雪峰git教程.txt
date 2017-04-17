@@ -24,7 +24,7 @@
 回退到上一版本
 	git reset --hard HEAD^          上上版本HEAD^^；上100版本HEAD~100
 	git reset --hard 版本号         回退到对应版本号（前七位即可）
-	cat file-name                    查看仓库当前文件内容
+	cat file-name                   查看仓库当前文件内容
 查看工作区和版本库文件区别
 	git diff HEAD -- file-name
 撤销修改
@@ -35,5 +35,25 @@
 	rm file-name                    删除工作区文件
 	git rm file-name                删除版本库文件
 	git commit -m "任意文字说明"    添加说明
-
 注：Git保存的是文件的修改，广义上称之为暂存区/版本库文件。
+创建远程仓库
+	已完成GitHub注册
+	ssh-keygen -t rsa -C "y
+	ouremail@example.com"
+	一路回车                        创建SSH Key
+	C：/user/username/.ssh/复制id_rsa.pub内容
+	登录GitHub-Account settings-SSH Keys
+	    -Add SSH Key（任意title+粘贴）
+添加内容到远程库
+	登录GitHub-Create a new repo（同名文件夹+Create repository）
+	git remote add origin git@githu
+	b.com:GH-name/folder-name.git   关联远程库
+	git push -u origin master       将本地内容推送至远程库并联系两master分支
+	（首次连接至GitHub时会出现警告，输入yes回车即可）
+	git push origin master          将本地内容推送至远程库
+从远程库克隆内容
+	登录GitHub-new repo（勾选readme）
+	git clone git@github.com:GH-na
+	me/folder-name.git              将远程文件夹克隆到本地
+	cd folder-name
+	ls                              进入该文件夹并查看内容
